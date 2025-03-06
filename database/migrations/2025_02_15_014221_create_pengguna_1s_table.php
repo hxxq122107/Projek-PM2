@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('pengguna_1', function (Blueprint $table) {
+            $table->integer('nim');
             $table->id();
-            $table->string("title");
-            $table->text("description")->nullable();
+            $table->string ('nama');
+            $table->integer('jurusan');
             $table->timestamps();
         });
     }
@@ -24,7 +25,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user');
+        Schema::dropIfExists('pengguna_1'); // Harus sesuai dengan tabel di up()
+
     }
 };
 ?>
