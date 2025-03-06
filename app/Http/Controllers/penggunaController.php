@@ -10,7 +10,7 @@ class PenggunaController extends Controller
     public function index(Request $request)
     {
         $katakunci = $request->katakunci;
-        $jumlahbaris = 4;
+        $jumlahbaris = 1000000000;
 
         // Query dengan pencarian jika ada kata kunci
         $data = Pengguna_1::when($katakunci, function ($query) use ($katakunci) {

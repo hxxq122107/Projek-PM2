@@ -15,14 +15,14 @@
                   <a href='{{route('pengguna_1.create')}}' class="btn btn-primary">+ Tambah Data</a>
                 </div>
           
-                <table class="table table-striped">
+                <table class="table">
                     <thead>
                         <tr>
                             <th class="col-md-1">No</th>
-                            <th class="col-md-3">NIM</th>
-                            <th class="col-md-4">Nama</th>
-                            <th class="col-md-2">Jurusan</th>
-                            <th class="col-md-2">Aksi</th>
+                            <th class="col-md-1">NIM</th>
+                            <th class="col-md-1">Nama</th>
+                            <th class="col-md-1">Jurusan</th>
+                            <th class="col-md-1">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
