@@ -19,9 +19,9 @@
                     <thead>
                         <tr>
                             <th class="col-md-1">No</th>
-                            <th class="col-md-1">NIM</th>
+                            <th class="col-md-1">email</th>
                             <th class="col-md-1">Nama</th>
-                            <th class="col-md-1">Jurusan</th>
+                            <th class="col-md-1">password</th>
                             <th class="col-md-1">Aksi</th>
                         </tr>
                     </thead>
@@ -29,17 +29,18 @@
                         @foreach ($data as $item)
                         <tr>
                             <td>1</td>
-                            <td>{{$item->nim}}</td>
+                            <td>{{$item->email}}</td>
                             <td>{{$item->nama}}</td>
-                            <td>{{$item->jurusan}}</td>
+                            <td>{{$item->password}}</td>
                             <td>
-                                <a href='{{url('pengguna_1/'.$item->nim.'/edit')}}' class="btn btn-warning btn-sm">Edit</a>
-                                <form on submit="return confirm('yakin akan menghapus data?')" class='d-inline' action="{{url('pengguna_1/'.$item->nim)}}"
-                                    method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" name="submit"  class="btn btn-danger btn-sm">Del</button>
-                                </form>
+                                <a href='{{url('pengguna_1/'.$item->id.'/edit')}}' class="btn btn-warning btn-sm">Edit</a>
+                                <form onsubmit="return confirm('Yakin akan menghapus data?')" class='d-inline' 
+                                action="{{ route('pengguna_1.destroy', $item->id) }}" method="post">
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="btn btn-danger btn-sm">Del</button>
+                          </form>
+                          
                             </td>
                         </tr>
                         @endforeach

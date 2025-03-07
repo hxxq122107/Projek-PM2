@@ -13,15 +13,15 @@
     </div>
 </div>    
 @endif
-<form action="{{ url('pengguna_1/'.$data->nim) }}" method="post">
+<form action="{{ url('pengguna_1/'.$data->id) }}" method="post">
     @csrf
     @method('PUT')
     <div class="my-3 p-3 bg-body rounded shadow-sm">
         <a href='{{url('pengguna_1')}}' class="btn btn-secondary"><< kembali</a>
         <div class="mb-3 row">
-            <label for="nim" class="col-sm-2 col-form-label">NIM</label>
+            <label for="id" class="col-sm-2 col-form-label">id</label>
             <div class="col-sm-10">
-                {{ $data->nim ?? '' }} 
+                {{ $data->id ?? '' }} 
             </div>
         </div>
         <div class="mb-3 row">
@@ -31,9 +31,9 @@
             </div>
         </div>
         <div class="mb-3 row">
-            <label for="jurusan" class="col-sm-2 col-form-label">Jurusan</label>
+            <label for="password" class="col-sm-2 col-form-label">password</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="jurusan" id="jurusan">
+                <input type="text" class="form-control" name="email" id="email">
             </div>
         </div>
         <div class="mb-3 row">
